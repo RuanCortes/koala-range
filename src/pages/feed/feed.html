@@ -1,0 +1,153 @@
+<!--
+  Generated template for the FeedPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Feed</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="bg">
+
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+    
+  <ion-slides>
+    <ion-slide>
+      <h1 class="categoria">
+        <strong>Alerta</strong>
+      </h1>
+      <ion-card>
+
+        <ion-item>
+          <ion-avatar item-start>
+            <img src="assets/img/ruan-avatar.jpg">
+          </ion-avatar>
+          <h2>Ruan Cortes</h2>
+          <p>21 de dezembro, 2017</p>
+        </ion-item>
+
+        <img src="assets/img/rapazeada.jpg">
+
+        <ion-card-content>
+          <p>Ninja renegado desaparecido!!</p>
+        </ion-card-content>
+
+        <ion-row>
+          <ion-col>
+            <button ion-button icon-left clear small>
+              <ion-icon name="thumbs-up"></ion-icon>
+              <div>12 curtidas</div>
+            </button>
+          </ion-col>
+          <ion-col>
+            <button ion-button icon-left clear small>
+              <ion-icon name="text"></ion-icon>
+              <div>4 Comentários</div>
+            </button>
+          </ion-col>
+          <ion-col center text-center>
+            <ion-note>
+              11h atrás
+            </ion-note>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </ion-slide>
+
+    <ion-slide>
+      <h1 class="categoria">
+        <strong>Eventos</strong>
+      </h1>
+      <ion-card>
+
+        <ion-item>
+          <ion-avatar item-start>
+            <img src="assets/img/ruan-avatar.jpg">
+          </ion-avatar>
+          <h2>Ruan Cortes</h2>
+          <p>21 de dezembro, 2017</p>
+        </ion-item>
+
+        <img src="assets/img/rapazeada.jpg">
+
+        <ion-card-content>
+          <p>Churrasco, hoje, no novo ap do Léo!</p>
+        </ion-card-content>
+
+        <ion-row>
+          <ion-col>
+            <button ion-button icon-left clear small>
+              <ion-icon name="thumbs-up"></ion-icon>
+              <div>12 curtidas</div>
+            </button>
+          </ion-col>
+          <ion-col>
+            <button ion-button icon-left clear small>
+              <ion-icon name="text"></ion-icon>
+              <div>4 Comentários</div>
+            </button>
+          </ion-col>
+          <ion-col center text-center>
+            <ion-note>
+              11h atrás
+            </ion-note>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </ion-slide>
+
+    <ion-slide>
+        <h1 class="categoria">
+          <strong>Social</strong>
+        </h1>
+        <ion-card>
+  
+          <ion-item>
+            <ion-avatar item-start>
+              <img src="assets/img/ruan-avatar.jpg">
+            </ion-avatar>
+            <h2>Ruan Cortes</h2>
+            <p>21 de dezembro, 2017</p>
+          </ion-item>
+  
+          <img src="assets/img/rapazeada.jpg">
+  
+          <ion-card-content>
+            <p>Fota com os amigos na Barra Funda tsc tsc</p>
+          </ion-card-content>
+  
+          <ion-row>
+            <ion-col>
+              <button ion-button icon-left clear small>
+                <ion-icon name="thumbs-up"></ion-icon>
+                <div>12 curtidas</div>
+              </button>
+            </ion-col>
+            <ion-col>
+              <button ion-button icon-left clear small>
+                <ion-icon name="text"></ion-icon>
+                <div>4 Comentários</div>
+              </button>
+            </ion-col>
+            <ion-col center text-center>
+              <ion-note>
+                11h atrás
+              </ion-note>
+            </ion-col>
+          </ion-row>
+        </ion-card>
+      </ion-slide>
+  </ion-slides>
+
+</ion-content>
