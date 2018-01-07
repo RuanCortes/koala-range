@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import 'rxjs/add/operator/map';
 
 /*
@@ -10,7 +10,7 @@ import 'rxjs/add/operator/map';
 */
 @Injectable()
 export class PostsProvider {
-  private apiUrl = 'https://localhost:8080/posts';
+  private apiUrl = 'http://localhost:8080/posts';
 
   constructor(public http: HttpClient) {
     console.log('Hello PostsProvider Provider');
@@ -21,11 +21,14 @@ export class PostsProvider {
     return new Promise(resolve => {
 
       let url = this.apiUrl + '/find-all';
-      
-      this.http.get(url)
+
+      let headers = new HttpHeaders();
+      headers = headers.set('Access-Control-Allow-Origin', '*');
+
+      this.http.get(url, { headers: headers })
         .subscribe((result: any) => {
-          resolve(result.json());
           console.log(result);
+          resolve(result);          
         }, err => {
           console.log(err);
         });
