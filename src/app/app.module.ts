@@ -11,11 +11,14 @@ import { FeedPage } from '../pages/feed/feed';
 import { ListPage } from '../pages/list/list';
 import { RangeMapComponent } from '../components/range-map/range-map';
 
+import { HttpClientModule } from '@angular/common/http';
+
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { Geolocation } from '@ionic-native/geolocation';
 import { Geofence } from '@ionic-native/geofence';
+import { PostsProvider } from '../providers/posts/posts';
 
 @NgModule({
   declarations: [
@@ -30,6 +33,7 @@ import { Geofence } from '@ionic-native/geofence';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -47,7 +51,8 @@ import { Geofence } from '@ionic-native/geofence';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     Geofence,
-    Geolocation
+    Geolocation,
+    PostsProvider
   ]
 })
 export class AppModule {}

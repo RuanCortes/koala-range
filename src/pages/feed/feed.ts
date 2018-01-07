@@ -1,12 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { PostsProvider } from '../../providers/posts/posts';
 
-/**
- * Generated class for the FeedPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -14,12 +9,25 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'feed.html',
 })
 export class FeedPage {
+  posts: any[];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public postsProvider: PostsProvider) {
+    this.getPosts();
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad FeedPage');
+  ionViewDidEnter() {
+    this.posts = [];
+  }
+
+  getPosts() {
+    this.postsProvider.getPost()
+    .then((result: any) => {
+      this.posts = result;
+      console.log("log do sucesso - " + this.posts)
+    })
+    .catch((error: any) => {
+      console.log('fodeu');
+    });
   }
 
   //Animação de carregando ao arrastar tela para baixo, no feed, com intuito de atualizar posts

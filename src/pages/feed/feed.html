@@ -29,11 +29,11 @@
       </h1>
       <ion-card>
 
-        <ion-item>
+        <ion-item *ngFor="let post of posts">
           <ion-avatar item-start>
             <img src="assets/img/ruan-avatar.jpg">
           </ion-avatar>
-          <h2>Ruan Cortes</h2>
+          <h2>{{ post.nome }}</h2>
           <p>21 de dezembro, 2017</p>
         </ion-item>
 
