@@ -2,15 +2,11 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import 'rxjs/add/operator/map';
 
-/*
-  Generated class for the PostsProvider provider.
 
-  See https://angular.io/docs/ts/latest/guide/dependency-injection.html
-  for more info on providers and Angular DI.
-*/
 @Injectable()
 export class PostsProvider {
-  private apiUrl = 'https://localhost:8080/posts';
+
+  private apiUrl = 'http://localhost:8080/posts';
 
   constructor(public http: HttpClient) {
     console.log('Hello PostsProvider Provider');
@@ -24,7 +20,7 @@ export class PostsProvider {
       
       this.http.get(url)
         .subscribe((result: any) => {
-          resolve(result.json());
+          resolve(result);
           console.log(result);
         }, err => {
           console.log(err);

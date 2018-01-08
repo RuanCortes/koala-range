@@ -4,8 +4,12 @@ page-feed {
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        height: 600px;
+        height: 700px;
         width: 100%;
+
+        ion-slides{
+            height: auto;
+        }
     }
 
     .content-ios{

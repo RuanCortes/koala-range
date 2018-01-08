@@ -27,27 +27,27 @@
       <h1 class="categoria">
         <strong>Alerta</strong>
       </h1>
-      <ion-card>
+      <ion-card *ngFor="let post of posts">
 
-        <ion-item *ngFor="let post of posts">
+        <ion-item>
           <ion-avatar item-start>
-            <img src="assets/img/ruan-avatar.jpg">
+            <img src="{{ post.profile.avatar }}">
           </ion-avatar>
-          <h2>{{ post.nome }}</h2>
+          <h2>{{ post.profile.nickname }}</h2>
           <p>21 de dezembro, 2017</p>
         </ion-item>
 
         <img src="assets/img/rapazeada.jpg">
 
         <ion-card-content>
-          <p>Ninja renegado desaparecido!!</p>
+          <p>{{ post.description }}</p>
         </ion-card-content>
 
         <ion-row>
           <ion-col>
             <button ion-button icon-left clear small>
               <ion-icon name="thumbs-up"></ion-icon>
-              <div>12 curtidas</div>
+              <div>{{ post.likes }}</div>
             </button>
           </ion-col>
           <ion-col>

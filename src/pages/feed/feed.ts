@@ -9,14 +9,14 @@ import { PostsProvider } from '../../providers/posts/posts';
   templateUrl: 'feed.html',
 })
 export class FeedPage {
-  posts: any[];
+  posts: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public postsProvider: PostsProvider) {
     this.getPosts();
   }
 
-  ionViewDidEnter() {
-    this.posts = [];
+  ionViewDidLoad() {
+    
   }
 
   getPosts() {
