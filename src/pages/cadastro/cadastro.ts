@@ -1,12 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the CadastroPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
+import { ApelidoPage } from '../apelido/apelido';
 
 @IonicPage()
 @Component({
@@ -20,6 +14,10 @@ export class CadastroPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CadastroPage');
+  }
+
+  apelido(){
+    this.navCtrl.push(ApelidoPage);
   }
 
 }

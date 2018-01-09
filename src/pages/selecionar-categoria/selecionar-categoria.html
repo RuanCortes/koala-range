@@ -1,0 +1,32 @@
+
+<ion-header>
+
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button> 
+      <ion-buttons end>
+          <button ion-button icon-only (click)="feed()">
+            <ion-icon name="close"></ion-icon>
+          </button>
+      </ion-buttons> 
+    </ion-navbar>
+  
+  </ion-header>
+
+
+<ion-content>
+
+    <h1>Selecione uma categoria</h1>
+
+    <button ion-button icon-only class="alerta" large (click)="feed()">Alerta
+        <ion-icon name="warning"></ion-icon>
+    </button>
+    <button ion-button icon-only class="evento" large (click)="feed()">Evento
+        <ion-icon name="beer"></ion-icon>
+    </button>
+    <button ion-button icon-only class="social" large (click)="feed()">Social
+        <ion-icon name="body"></ion-icon>
+    </button>
+
+</ion-content>

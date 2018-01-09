@@ -25517,6 +25517,28 @@ ion-navbar.toolbar {
   color: #fff;
 }
 
+page-apelido h1 {
+  padding: 1em 0em;
+}
+
+page-apelido ion-input {
+  border: 1px solid gray;
+  border-radius: 2em;
+  margin-bottom: 2em;
+}
+
+page-apelido ion-input .text-input-ios {
+  text-align: center;
+}
+
+page-feed ion-header .alerta {
+  background-color: #e5ff00;
+}
+
+page-feed ion-header .evento {
+  background-color: #0f0096;
+}
+
 page-feed ion-content {
   background-image: url("../assets/img/bg-madeira2.jpg");
   background-repeat: no-repeat;
@@ -25524,6 +25546,14 @@ page-feed ion-content {
   background-size: cover;
   height: 700px;
   width: 100%;
+}
+
+page-feed ion-content ion-slides {
+  height: auto;
+}
+
+page-feed .toolbar-background {
+  background-color: #ffffff;
 }
 
 page-feed .content-ios {
@@ -25649,6 +25679,30 @@ body {
   height: 100%;
   margin-top: 20px;
   overflow: auto !important;
+}
+
+page-selecionar-categoria .alerta {
+  display: block;
+  width: 100%;
+  height: 100px;
+  background-color: gold;
+  font-weight: bold;
+}
+
+page-selecionar-categoria .evento {
+  display: block;
+  width: 100%;
+  height: 100px;
+  background-color: darkslateblue;
+  font-weight: bold;
+}
+
+page-selecionar-categoria .social {
+  display: block;
+  width: 100%;
+  height: 100px;
+  background-color: seagreen;
+  font-weight: bold;
 }
 
 page-welcome h1 {

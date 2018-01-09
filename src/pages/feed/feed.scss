@@ -1,4 +1,14 @@
 page-feed {
+    ion-header{
+        .alerta{
+            background-color: #e5ff00;
+        }
+
+        .evento{
+            background-color: #0f0096;
+        }
+    }
+
     ion-content{
         background-image: url('../assets/img/bg-madeira2.jpg');
         background-repeat: no-repeat;
@@ -11,6 +21,10 @@ page-feed {
             height: auto;
         }
     }
+
+    .toolbar-background {
+        background-color: #ffffff;
+      }
 
     .content-ios{
         background-color: transparent;

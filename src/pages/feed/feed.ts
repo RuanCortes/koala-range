@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { PostsProvider } from '../../providers/posts/posts';
+import { CriarPostPage } from '../criar-post/criar-post';
 
 
 @IonicPage()
@@ -16,7 +17,7 @@ export class FeedPage {
   }
 
   ionViewDidLoad() {
-    
+
   }
 
   getPosts() {
@@ -38,6 +39,10 @@ export class FeedPage {
       console.log('Async operation has ended');
       refresher.complete();
     }, 2000);
+  }
+
+  criarPost(){
+    this.navCtrl.push(CriarPostPage);
   }
 
 }

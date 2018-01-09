@@ -9,6 +9,10 @@ import { CadastroPage } from '../pages/cadastro/cadastro';
 import { HomePage } from '../pages/home/home';
 import { FeedPage } from '../pages/feed/feed';
 import { ListPage } from '../pages/list/list';
+import { SelecionarCategoriaPage } from '../pages/selecionar-categoria/selecionar-categoria';
+import { CriarPostPage } from '../pages/criar-post/criar-post';
+import { ApelidoPage } from '../pages/apelido/apelido';
+
 import { RangeMapComponent } from '../components/range-map/range-map';
 
 import { HttpClientModule } from '@angular/common/http';
@@ -29,6 +33,9 @@ import { PostsProvider } from '../providers/posts/posts';
     HomePage,
     ListPage,
     FeedPage,
+    SelecionarCategoriaPage,
+    CriarPostPage,
+    ApelidoPage,
     RangeMapComponent
   ],
   imports: [
@@ -44,7 +51,10 @@ import { PostsProvider } from '../providers/posts/posts';
     CadastroPage,
     HomePage,
     FeedPage,
-    ListPage
+    ListPage,
+    SelecionarCategoriaPage,
+    CriarPostPage,
+    ApelidoPage
   ],
   providers: [
     StatusBar,
