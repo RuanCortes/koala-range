@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { RequestOptions, Headers} from '@angular/http';
 import 'rxjs/add/operator/map';
 
 
@@ -24,6 +25,23 @@ export class PostsProvider {
           console.log(result);
         }, err => {
           console.log(err);
+        });
+    });
+  }
+
+  createPost(data){
+    console.log("createPost - " + JSON.stringify(data));
+    let url = this.apiUrl + '/create';
+
+    alert("metodo createPost");
+    
+    return new Promise((resolve, reject) =>{
+      this.http.post(url, data)
+        .subscribe(res => {
+          resolve(res);
+          alert("metodo createPost");
+        }, (err) => {
+          reject(err);
         });
     });
   }

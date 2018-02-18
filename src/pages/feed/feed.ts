@@ -12,7 +12,10 @@ import { CriarPostPage } from '../criar-post/criar-post';
 export class FeedPage {
   posts: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public postsProvider: PostsProvider) {
+  constructor(public navCtrl: NavController, 
+              public navParams: NavParams, 
+              public postsProvider: PostsProvider) 
+  {
     this.getPosts();
   }
 

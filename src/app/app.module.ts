@@ -13,16 +13,21 @@ import { SelecionarCategoriaPage } from '../pages/selecionar-categoria/seleciona
 import { CriarPostPage } from '../pages/criar-post/criar-post';
 import { ApelidoPage } from '../pages/apelido/apelido';
 
-import { RangeMapComponent } from '../components/range-map/range-map';
-
 import { HttpClientModule } from '@angular/common/http';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-
+import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer';
+import { File } from '@ionic-native/file';
+import { Camera } from '@ionic-native/camera';
 import { Geolocation } from '@ionic-native/geolocation';
 import { Geofence } from '@ionic-native/geofence';
+import { RangeMapComponent } from '../components/range-map/range-map';
+
 import { PostsProvider } from '../providers/posts/posts';
+import { ProfileProvider } from '../providers/profile/profile';
+import { GeolocalizacaoProvider } from '../providers/geolocalizacao/geolocalizacao';
+
 
 @NgModule({
   declarations: [
@@ -62,7 +67,12 @@ import { PostsProvider } from '../providers/posts/posts';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     Geofence,
     Geolocation,
-    PostsProvider
+    PostsProvider,
+    ProfileProvider,
+    FileTransfer,
+    File,
+    Camera,
+    GeolocalizacaoProvider
   ]
 })
 export class AppModule {}

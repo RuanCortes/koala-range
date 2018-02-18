@@ -28,30 +28,30 @@ export class HomePage {
 
 	getUserPosition(){
     	this.options = {
-    	enableHighAccuracy : true
-    };
-    this.geolocation.getCurrentPosition(this.options).then((pos : Geoposition) => {
+    		enableHighAccuracy : true
+		};
+	
+		this.geolocation.getCurrentPosition(this.options).then((pos : Geoposition) => {
 
-        this.currentPos = pos;     
+			this.currentPos = pos;     
 
-        console.log(pos);
-		this.addMap(pos.coords.latitude,pos.coords.longitude);
-		
-		this.cityCircle = new google.maps.Circle({
-			strokeColor: '#FF0000',
-			strokeOpacity: 0.8,
-			strokeWeight: 2,
-			fillColor: '#FF0000',
-			fillOpacity: 0.35,
-			map: this.map,
-			center: new google.maps.LatLng(this.currentPos.coords.latitude, this.currentPos.coords.longitude),
-			radius: 100	
-		});
+			console.log(pos);
+			this.addMap(pos.coords.latitude,pos.coords.longitude);
+			
+			this.cityCircle = new google.maps.Circle({
+				strokeColor: '#FF0000',
+				strokeOpacity: 0.8,
+				strokeWeight: 2,
+				fillColor: '#FF0000',
+				fillOpacity: 0.35,
+				map: this.map,
+				center: new google.maps.LatLng(this.currentPos.coords.latitude, this.currentPos.coords.longitude),
+				radius: 100	
+			});
 
-    },(err : PositionError)=>{
-        console.log("error : " + err.message);
-    	;
-    	})
+		},(err : PositionError)=>{
+			console.log("error : " + err.message);
+		   })
 	}
  
   	ionViewDidEnter(){

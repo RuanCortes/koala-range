@@ -15,4 +15,32 @@
 
 <ion-content padding>
 
+    <ion-list >
+
+      <ion-item>
+        <ion-label fixed>Descrição aqui...</ion-label>
+        <ion-input type="text" [(ngModel)]="post.description" name="description"></ion-input>
+      </ion-item>
+
+      <ion-item>
+          <ion-label fixed>Categoria</ion-label>
+          <ion-input type="text" [(ngModel)]="post.category.id" name="category"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <p>{{imageURI}}</p>
+        <button ion-button color="secondary" (click)="getImage()">Get Image</button>
+      </ion-item>
+      <ion-item>
+        <h4>Image Preview</h4>
+        <img src="{{imageFileName}}" *ngIf="imageFileName" alt="Ionic File" width="300" />
+      </ion-item>
+      <ion-item>
+        <button ion-button (click)="uploadFile()">Upload</button>
+      </ion-item>
+
+      <button ion-button (click)="savePost(post)" type="submit" block>Criar post</button>
+      
+    </ion-list>
+
 </ion-content>

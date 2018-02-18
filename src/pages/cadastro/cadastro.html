@@ -18,22 +18,17 @@
     <ion-list>
 
         <ion-item>
-            <ion-label fixed>E-mail</ion-label>
-            <ion-input type="text" value=""></ion-input>
-          </ion-item>
-
-        <ion-item>
           <ion-label fixed>Username</ion-label>
-          <ion-input type="text" value=""></ion-input>
+          <ion-input type="text" [(ngModel)]="user.profile.nickname" name="nickname" value=""></ion-input>
         </ion-item>
       
         <ion-item>
-          <ion-label fixed>Password</ion-label>
-          <ion-input type="password"></ion-input>
+          <ion-label fixed>E-mail</ion-label>
+          <ion-input type="text" [(ngModel)]="user.profile.email" name="email"></ion-input>
         </ion-item>
       
       </ion-list>
 
-      <button ion-button block (click)="apelido()">Cadastrar</button>
+      <button ion-button block (click)="addUser(user)">Cadastrar</button>
 
 </ion-content>
