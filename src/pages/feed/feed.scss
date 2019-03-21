@@ -1,0 +1,39 @@
+page-feed {
+    ion-header{
+        .alerta{
+            background-color: #e5ff00;
+        }
+
+        .evento{
+            background-color: #0f0096;
+        }
+    }
+
+    ion-content{
+        background-image: url('../assets/img/bg-madeira2.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 700px;
+        width: 100%;
+
+        ion-slides{
+            height: auto;
+        }
+    }
+
+    .toolbar-background {
+        background-color: #ffffff;
+      }
+
+    .content-ios{
+        background-color: transparent;
+    }
+
+    .categoria{
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+}

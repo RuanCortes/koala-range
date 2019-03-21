@@ -1,0 +1,17 @@
+page-apelido {
+
+    h1{
+        padding: 1em 0em;
+    }
+
+    ion-input{
+        border: 1px solid gray;
+        border-radius: 2em;
+        margin-bottom: 2em;
+    
+        .text-input-ios{
+            text-align: center;
+        }
+    }
+
+}
